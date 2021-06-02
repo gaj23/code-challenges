@@ -38,23 +38,35 @@ const returnOrderedParts = (a1, a2) => {
 
   const r = []
 
+  // a1.forEach(part => {
+  //   a2.forEach(whole => {
+  //     const findPart = (whole, part) => {
+  //       if (whole.includes(part) && !r.includes(part)) {
+  //         r.push(part)
+  //         // need to push to the array that will eventually be returned
+  //         //want array of used parts only ONCE
+  //       }
+  //     }
+  //
+  //     findPart(whole, part)
+  //   })
+  // })
+
   a1.forEach(part => {
-    a2.forEach(whole => {
-      const findPart = (whole, part) => {
-        if (whole.includes(part)) {
-          r.push(whole)
-          // need to push to the array that will eventually be returned
-        }
+    a2.find(whole => {
+      if(whole.includes(part) && !r.includes(part)) {
+        r.push(part)
       }
-
-      findPart(whole, part)
     })
-  })
+ })
 
-
-  // return r
   return r.sort()
   //check sort for alphabet order
-  //what if I have apple and art? both are as, but the order needs to further be considered
+  // do I need to worry about having parts that have the first same letter and then need to be further compared?
 
 }
+
+//edge cases:
+//if undefined value?
+// if null value?
+// if none of that parts match the whole -> what gets returned then? 
