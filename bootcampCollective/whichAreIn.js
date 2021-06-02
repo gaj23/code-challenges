@@ -36,6 +36,10 @@
 
 const returnOrderedParts = (a1, a2) => {
 
+  if (!a1 || !a2 ) {
+    return 'Please enter valid strings'
+  }
+
   const r = []
 
   // a1.forEach(part => {
@@ -60,7 +64,7 @@ const returnOrderedParts = (a1, a2) => {
     })
  })
 
-  return r.sort()
+  return r === [] ? r.sort() : 'No matches found'
   //check sort for alphabet order
   // do I need to worry about having parts that have the first same letter and then need to be further compared?
 
@@ -69,4 +73,5 @@ const returnOrderedParts = (a1, a2) => {
 //edge cases:
 //if undefined value?
 // if null value?
-// if none of that parts match the whole -> what gets returned then? 
+// if none of that parts match the whole -> what gets returned then?
+//what if one of the things has an exclaimation point? How does it get sorted then?
