@@ -11,11 +11,14 @@
 //return true if these two things are strictly equal to one another
 
 const feast = (beast, dish) => {
+  if (beast && dish) {
+    const beastFirstLast = spliceFirstLast(beast);
+    const dishFirstLast = spliceFirstLast(dish);
 
-  const beastFirstLast = spliceFirstLast(beast);
-  const dishFirstLast = spliceFirstLast(dish);
-
-  return beastFirstLast === dishFirstLast ?  true :  false
+    return beastFirstLast === dishFirstLast ?  true :  false
+  } else {
+    return 'Please enter in the correct data type'
+  }
 
 }
 
