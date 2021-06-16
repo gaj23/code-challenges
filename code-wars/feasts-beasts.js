@@ -11,15 +11,11 @@
 //return true if these two things are strictly equal to one another
 
 const feast = (beast, dish) => {
- //call helper function twice and store return as a variable
-  const beastFirstLast = false;
-  const dishFishLast = false;
 
-  if (beastFirstLast === dishFishLast) {
-    return true
-  } else {
-    return false
-  }
+  const beastFirstLast = spliceFirstLast(beast);
+  const dishFirstLast = spliceFirstLast(dish);
+
+  return beastFirstLast === dishFirstLast ?  true :  false
 
 }
 
@@ -27,12 +23,9 @@ const spliceFirstLast = input => {
   const inputs = input.split('')
   const first = inputs.shift()
   const last = inputs.pop()
-  console.log(first)
-  console.log(last)
-  // make into an array
-  // grab first and last only
-  // join into a string
-  // return the joined string
+  const firstLast = first + last
+
+  return firstLast
 }
 
-spliceFirstLast('boo')
+//what if undefined or null?
