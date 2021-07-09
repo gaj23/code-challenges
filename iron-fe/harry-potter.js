@@ -180,6 +180,17 @@ const addProperty = () => {
 //Problem 3.2
 //Console log the class that each house head is teaching
 
+const showClassesTaughtByHeads = () => {
+  return hogwarts.classes.filter(lesson => {
+    if (Object.keys(houseHeads).includes(lesson.instructor)) {
+      return lesson
+    }
+  })
+}
+
+// showClassesTaughtByHeads()
+
+
 
 
 // Problem 3.3
