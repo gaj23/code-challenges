@@ -110,7 +110,6 @@ let hogwarts = {
 //Problem 1.1
 // Create a function where you can put the name of a house head
 // and get back the student objects that in that house
-
 const findHouseHeadPlusStudents = (head) => {
   return students.filter(student => student.house === houseHeads[head])
 }
@@ -136,7 +135,14 @@ const findStudentNamesOfHouse = (head) => {
 
 // Problem 2.1
 //How many house points have been added to the house cups overall?
+const addAllHousePoints = () => {
+  return students.reduce((acc, student) => {
+    acc += student.pointsForHouse
+    return acc
+  }, 0)
+}
 
+// addAllHousePoints()
 
 
 //Problem 2.2
