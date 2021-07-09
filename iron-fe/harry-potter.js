@@ -192,20 +192,27 @@ const showClassesTaughtByHeads = () => {
 
 
 
-
 // Problem 3.3
 //Check to see if any students are missing from class
+
+// This data is not given/does not exist. The type of classes a student is taken or what student is taking what class, is not a property that exists in either the students array or the hogwarts object.
 
 
 // Problem 5.1
 //Dumbledore just defeated Grindelwald and obtained the elder wand! Create an array of all his wands
 
-
+hogwarts.currentHeadmaster.wand = ['Elder Wand', hogwarts.currentHeadmaster.wand]
 
 //Problem 5.2
 //Which one of Dumbledore's family members are alive? RETURN JUST THE NAME, not an array of object
 
+// hogwarts.currentHeadmaster.family.filter(member => {
+//   if (member.alive) {
+//     return //return that first value of the object
+//   }
+// })
 
+//trick! name of family member is
 
 //Problem 5.3
 //Which of them are dead? RETURN JUST THE NAMES, not an array of objects
