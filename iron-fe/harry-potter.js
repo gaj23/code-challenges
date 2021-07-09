@@ -148,7 +148,16 @@ const addAllHousePoints = () => {
 //Problem 2.2
 //How many house points have the Ravenclaw folks added to their cup?
 
+const addHousePoints = house => {
+  return students.reduce((acc, student) => {
+    if (student.house === house) {
+      acc += student.pointsForHouse
+    }
+    return acc
+  }, 0)
+}
 
+addHousePoints('Ravenclaw')
 
 
 // Problem 3.1
