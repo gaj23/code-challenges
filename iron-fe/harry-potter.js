@@ -120,19 +120,18 @@ const findHouseHeadPlusStudents = (head) => {
 
 //Problem 1.2
 //Can you make the array send back only the names of the students?
-
 const findStudentNamesOfHouse = (head) => {
-  const names = students.filter(student => {
-    if(student.house === houseHeads[head]){
-      return student.name
+  const names = students.reduce((acc, student) => {
+    if (student.house === houseHeads[head]) {
+      acc.push(student.name)
     }
-  })
-  //should be an array of strings that only represent
-  console.log(names)
+    return acc
+  }, [])
+
   return names
 }
 
-console.log(findStudentNamesOfHouse('Snape'))
+// findStudentNamesOfHouse('Snape')
 
 
 // Problem 2.1
