@@ -163,6 +163,18 @@ addHousePoints('Ravenclaw')
 // Problem 3.1
 //For all students excpet the Slytherins, add a property called 'currentlyAttending' with a value of true. For Slytherins, add make it false
 
+const addProperty = () => {
+  students.forEach(student => {
+    if (student.house !== 'Slytherin') {
+      student.currentlyAttending = true;
+    } else {
+      student.currentlyAttending = false
+    }
+  })
+}
+
+// addProperty()
+// console.log(students)
 
 
 //Problem 3.2
