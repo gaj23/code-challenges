@@ -206,17 +206,30 @@ hogwarts.currentHeadmaster.wand = ['Elder Wand', hogwarts.currentHeadmaster.wand
 //Problem 5.2
 //Which one of Dumbledore's family members are alive? RETURN JUST THE NAME, not an array of object
 
-// hogwarts.currentHeadmaster.family.filter(member => {
-//   if (member.alive) {
-//     return //return that first value of the object
-//   }
-// })
+const findLivingRelatives = () => {
+  hogwarts.currentHeadmaster.family.filter(member => {
+  const familyMember = Object.values(member)
+  if (member.alive) {
+    console.log(familyMember[0])
+    }
+  })
+}
 
-//trick! name of family member is
+// findLivingRelatives()
 
 //Problem 5.3
 //Which of them are dead? RETURN JUST THE NAMES, not an array of objects
 
+const findDepartedRelatives = () => {
+  hogwarts.currentHeadmaster.family.filter(member => {
+  const familyMember = Object.values(member)
+  if (!member.alive) {
+    console.log(familyMember[0])
+    }
+  })
+}
+
+// findDepartedRelatives()
 
 
 
